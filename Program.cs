@@ -109,7 +109,7 @@ class Program
             Console.WriteLine("Контейнер " + (i + 1) + ": " + string.Join(", ", containers[i].Select(x => x)));
         }
         stopwatch.Stop();
-        Console.WriteLine(stopwatch.ElapsedMilliseconds);
+        Console.WriteLine("Time: " + stopwatch.ElapsedMilliseconds + " ms");
     }
     static void FFS(int n, int M, int[] m)
     {
@@ -164,12 +164,16 @@ class Program
             Console.WriteLine("Предметы в контейнере " + (i + 1) + ": " + string.Join(", ", containers[i]));
         }
         stopwatch.Stop();
-        Console.WriteLine(stopwatch.ElapsedMilliseconds);
+        Console.WriteLine("Time: "+ stopwatch.ElapsedMilliseconds+ " ms");
     }
 
     static void enumeration(int n, int M, int[] weights)
     {
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
         Permute(weights, 0, weights.Length - 1, M);
+        stopwatch.Stop();
+        Console.WriteLine("Time: "+stopwatch.ElapsedMilliseconds+ " ms");
     }
 
     static void Permute(int[] arr, int startIndex, int endIndex, int M)
