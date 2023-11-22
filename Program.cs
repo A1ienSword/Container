@@ -37,8 +37,8 @@ class Program
 
 
         {
-            n = generateRandInt(100, 200);
-            M = generateRandInt(100, 200);
+            n = generateRandInt(3,4);
+            M = generateRandInt(3,4);
             m = new int[n]; // массы предметов
 
             for (int i = 0; i < m.Length; i++)
